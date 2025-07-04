@@ -23,6 +23,7 @@ use Carbon\Carbon;
 class KertanController extends Controller
 {
 public function beranda()
+<<<<<<< HEAD
 {
     // Mendapatkan instance pengguna yang sedang login
     $user = Auth::user();
@@ -39,6 +40,19 @@ public function beranda()
     // Mengirimkan data ke view
     return view('beranda', compact('warga', 'satpam', 'user', 'notifPengajuan', 'notifPengaduan', 'notifTamu'));
 }
+=======
+    {
+        // Mendapatkan instance pengguna yang sedang login
+        $user = Auth::user();
+
+        // Data lain yang ingin kamu tampilkan di beranda
+        $warga = Warga::all();
+        $satpam = Satpam::select('nama', 'no_hp', 'shift')->get();
+
+        // Mengirimkan data pengguna ke view
+        return view('beranda', compact('warga', 'satpam', 'user'));
+    }
+>>>>>>> 535ea1bba039034241405b95dc5c1a39bb663298
 
     public function tampilkanWarga(Request $request)
     {
