@@ -11,7 +11,14 @@ Route::get('/', function () {
 Route::get('/beranda', [KertanController::class, 'beranda'])
     ->middleware('cekrole:admin1') // jika memang khusus admin1
     ->name('beranda');
+<<<<<<< HEAD
     
+=======
+<<<<<<< HEAD
+    
+=======
+>>>>>>> 535ea1bba039034241405b95dc5c1a39bb663298
+>>>>>>> cf64aa84942adf4c8c6fbd3cdd6a7a3c03d5984d
 
 // Halaman welcome setelah login
 Route::get('/welcome', [AuthController::class, 'showWelcomePage'])->name('welcome');
